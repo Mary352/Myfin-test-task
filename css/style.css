@@ -1,0 +1,55 @@
+:root {
+   /* 70% */
+   --column-width: 65% repeat(2, 1fr);
+}
+
+.container {
+   max-width: 1170px;
+   margin: 0 auto;
+}
+
+.credit-table {
+   text-align: center;
+   width: 100%;
+   border: 1px solid #000;
+   display: grid;
+   /* grid-template-columns: repeat(3, 1fr); */
+   grid-template-rows: repeat(6, max-content);
+}
+
+.credit-table__header {
+   border: 1px solid black;
+   grid-column: 1 / 4;
+   grid-row: 1;
+
+   display: grid;
+   grid-template-rows: subgrid;
+   /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.credit-table__body {
+   border: 1px solid black;
+   grid-column: 1 / 4;
+   grid-row: 2 / 7;
+
+   display: grid;
+   grid-template-rows: subgrid;
+   /* grid-template-columns: subgrid; */
+}
+
+.credit-table__row {
+   display: grid;
+   grid-template-columns: var(--column-width);
+   /* grid-template-rows: subgrid; */
+}
+
+.credit-table__head-row {
+   display: grid;
+   grid-template-columns: var(--column-width);
+   /* grid-template-rows: subgrid; */
+}
+
+.credit-table__row>td:first-child {
+   text-align: left;
+   padding-left: 15px;
+}
