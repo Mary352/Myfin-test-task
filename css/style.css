@@ -1,39 +1,47 @@
 :root {
    /* 70% */
    --column-width: 65% repeat(2, 1fr);
+   --inter: "Inter", sans-serif;
+   --light: #D9D5EC;
+   --hover-transition: 0.3s;
 }
 
 .container {
    max-width: 1170px;
    margin: 0 auto;
+   font-family: var(--inter);
+   font-weight: 500;
 }
 
 .credit-table {
-   text-align: center;
-   width: 100%;
-   border: 1px solid #000;
+   margin: 15px 0;
    display: grid;
    /* grid-template-columns: repeat(3, 1fr); */
    grid-template-rows: repeat(6, max-content);
+   text-align: center;
+   width: 100%;
+   /* border: 1px solid #000; */
 }
 
 .credit-table__header {
-   border: 1px solid black;
-   grid-column: 1 / 4;
-   grid-row: 1;
-
    display: grid;
    grid-template-rows: subgrid;
+   grid-column: 1 / 4;
+   grid-row: 1;
+   border-top: 1px solid var(--light);
+   border-bottom: 1px solid var(--light);
+
    /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .credit-table__body {
-   border: 1px solid black;
-   grid-column: 1 / 4;
-   grid-row: 2 / 7;
-
+   /* border: 1px solid black; */
    display: grid;
    grid-template-rows: subgrid;
+   grid-column: 1 / 4;
+   grid-row: 2 / 7;
+   color: #25213B;
+
    /* grid-template-columns: subgrid; */
 }
 
@@ -41,15 +49,41 @@
    display: grid;
    grid-template-columns: var(--column-width);
    /* grid-template-rows: subgrid; */
+   border-bottom: 1px solid var(--light);
 }
 
 .credit-table__head-row {
    display: grid;
    grid-template-columns: var(--column-width);
    /* grid-template-rows: subgrid; */
+   background-color: #F4F2FF;
+   color: #6E6893;
+}
+
+.credit-table__row:hover {
+   background-color: var(--light);
+   cursor: default;
+   transition: var(--hover-transition);
 }
 
 .credit-table__row>td:first-child {
    text-align: left;
    padding-left: 15px;
+}
+
+.button {
+   display: block;
+   color: #fff;
+   background-color: #6D5BD0;
+   font-weight: 600;
+   padding: 10px;
+   border-radius: 6px;
+   border: none;
+   margin-left: auto;
+   cursor: pointer;
+}
+
+.button:hover {
+   background-color: #7c70c3;
+   transition: var(--hover-transition);
 }
