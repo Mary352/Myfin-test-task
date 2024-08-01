@@ -2,6 +2,7 @@
    visibility: hidden;
    opacity: 0;
    font-family: var(--inter);
+   font-size: clamp(12px, 2.5vw, 18px);
    position: fixed;
    display: flex;
    top: 0;
@@ -48,6 +49,7 @@
 
 .button--submit {
    margin: 20px auto 25px auto;
+   max-width: 100%;
    width: 50%;
 }
 
@@ -59,10 +61,14 @@
 }
 
 .request-popup__close svg {
-   width: 20px;
-   height: 20px;
+   width: clamp(10px, 3vw, 20px);
 }
 
 .request-popup__close:hover {
    cursor: pointer;
+}
+
+.request-popup__close svg path:hover {
+   fill: #b5abf2;
+   transition: var(--hover-transition);
 }
