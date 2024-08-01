@@ -1,6 +1,5 @@
 :root {
-   /* 70% */
-   --column-width: 65% repeat(2, 1fr);
+   --column-width: 40% repeat(2, 1fr) 25%;
    --inter: "Inter", sans-serif;
    --light: #D9D5EC;
    --hover-transition: 0.3s;
@@ -18,6 +17,7 @@ a {
    margin: 0 auto;
    font-family: var(--inter);
    font-weight: 500;
+   font-size: clamp(12px, 2.5vw, 18px);
 }
 
 .credit-table {
@@ -31,7 +31,7 @@ a {
 .credit-table__header {
    display: grid;
    grid-template-rows: subgrid;
-   grid-column: 1 / 4;
+   grid-column: 1 / 5;
    grid-row: 1;
    border-top: 1px solid var(--light);
    border-bottom: 1px solid var(--light);
@@ -40,7 +40,7 @@ a {
 .credit-table__body {
    display: grid;
    grid-template-rows: subgrid;
-   grid-column: 1 / 4;
+   grid-column: 1 / 5;
    grid-row: 2 / 7;
    color: #25213B;
 }
@@ -66,7 +66,7 @@ a {
 
 .credit-table__row>td:first-child {
    text-align: left;
-   padding-left: 15px;
+   /* padding-left: clamp(5px, 1.3vw, 15px); */
 }
 
 .button {
@@ -75,15 +75,12 @@ a {
    background-color: #6D5BD0;
    color: #fff;
    font-weight: 600;
-   padding: 10px;
+   padding: clamp(5px, 1.3vw, 10px);
    border-radius: 6px;
    border: none;
    cursor: pointer;
-   width: max-content;
-}
-
-.button--request {
-   margin-left: auto;
+   max-width: max-content;
+   margin: 1px auto;
 }
 
 .button:hover {
@@ -93,4 +90,12 @@ a {
 
 .button a {
    color: #fff;
+}
+
+.credit-table th {
+   align-self: center;
+}
+
+.credit-table td {
+   align-self: center;
 }
