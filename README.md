@@ -1,6 +1,5 @@
 # Myfin-test-task
-
-![alt text](https://mary352.github.io/Myfin-test-task/ "Посмотреть на github-pages")
+<a href="https://mary352.github.io/Myfin-test-task/" target="_blank">Посмотреть на github-pages</a>
 
 Создана  HTML-страница с таблицей, содержащей 5 банковских кредитов. Адаптив выполнен с помощью grid.
 
