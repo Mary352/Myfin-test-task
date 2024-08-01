@@ -6,6 +6,12 @@
    --hover-transition: 0.3s;
 }
 
+a {
+   text-decoration: none;
+   display: block;
+   color: #000;
+}
+
 .container {
    max-width: 1170px;
    margin: 0 auto;
@@ -73,17 +79,27 @@
 
 .button {
    display: block;
-   color: #fff;
+   font-family: var(--inter);
    background-color: #6D5BD0;
+   color: #fff;
    font-weight: 600;
    padding: 10px;
    border-radius: 6px;
    border: none;
-   margin-left: auto;
    cursor: pointer;
+   width: max-content;
+}
+
+.button--request {
+   margin-left: auto;
+
 }
 
 .button:hover {
    background-color: #7c70c3;
    transition: var(--hover-transition);
+}
+
+.button a {
+   color: #fff;
 }
