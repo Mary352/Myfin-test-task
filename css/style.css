@@ -13,7 +13,8 @@ a {
 }
 
 .container {
-   max-width: 1170px;
+   max-width: 1130px;
+   padding: 0 15px;
    margin: 0 auto;
    font-family: var(--inter);
    font-weight: 500;
@@ -22,11 +23,9 @@ a {
 .credit-table {
    margin: 15px 0;
    display: grid;
-   /* grid-template-columns: repeat(3, 1fr); */
    grid-template-rows: repeat(6, max-content);
    text-align: center;
    width: 100%;
-   /* border: 1px solid #000; */
 }
 
 .credit-table__header {
@@ -36,32 +35,25 @@ a {
    grid-row: 1;
    border-top: 1px solid var(--light);
    border-bottom: 1px solid var(--light);
-
-   /* grid-template-columns: repeat(3, 1fr); */
 }
 
 .credit-table__body {
-   /* border: 1px solid black; */
    display: grid;
    grid-template-rows: subgrid;
    grid-column: 1 / 4;
    grid-row: 2 / 7;
    color: #25213B;
-
-   /* grid-template-columns: subgrid; */
 }
 
 .credit-table__row {
    display: grid;
    grid-template-columns: var(--column-width);
-   /* grid-template-rows: subgrid; */
    border-bottom: 1px solid var(--light);
 }
 
 .credit-table__head-row {
    display: grid;
    grid-template-columns: var(--column-width);
-   /* grid-template-rows: subgrid; */
    background-color: #F4F2FF;
    color: #6E6893;
 }
@@ -92,7 +84,6 @@ a {
 
 .button--request {
    margin-left: auto;
-
 }
 
 .button:hover {
