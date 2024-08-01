@@ -58,15 +58,16 @@ a {
    color: #6E6893;
 }
 
-/* .credit-table__row:hover {
-   background-color: var(--light);
-   cursor: default;
-   transition: var(--hover-transition);
-} */
+.credit-table th {
+   align-self: center;
+}
+
+.credit-table td {
+   align-self: center;
+}
 
 .credit-table__row>td:first-child {
    text-align: left;
-   /* padding-left: clamp(5px, 1.3vw, 15px); */
 }
 
 .button {
@@ -90,12 +91,4 @@ a {
 
 .button a {
    color: #fff;
-}
-
-.credit-table th {
-   align-self: center;
-}
-
-.credit-table td {
-   align-self: center;
 }
